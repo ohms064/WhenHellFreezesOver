@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerAnimationController : MonoBehaviour {
     private Animator _animator;
     private float _movimiento;
-	// Use this for initialization
-	void Start () {
-	    _animator = this.GetComponent<Animator>();
-	}
-	
-	// Update is called once per frame
+    // Use this for initialization
+    void Start() {
+        _animator = this.GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
     void Update() {
         _movimiento = Input.GetAxis( "Horizontal" );
         if ( _movimiento != 0 && !_animator.GetBool( "Running" ) ) { StartCoroutine( "Run" ); }
@@ -17,9 +17,9 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator Run() {
         _animator.SetBool( "Running", true );
-        
+
         do {
-            this.transform.position += new Vector3( _movimiento*Time.deltaTime, 0.0f, 0.0f );
+            this.transform.position += new Vector3( _movimiento * Time.deltaTime, 0.0f, 0.0f );
             yield return new WaitForEndOfFrame();
         }
         while ( _movimiento != 0.0f );
