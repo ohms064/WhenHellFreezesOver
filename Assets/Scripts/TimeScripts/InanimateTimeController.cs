@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+
 [RequireComponent((typeof(Rigidbody)))]
 public class InanimateTimeController : TimeBound {
     private Rigidbody _rigidbody;
@@ -17,6 +19,19 @@ public class InanimateTimeController : TimeBound {
 
     public override void ToggleFreeze() {
         _frozen = !_frozen;
+        if ( _frozen ) {
+            _velocityAtStop = this._rigidbody.velocity;
+            _angularVelocityAtStop = this._rigidbody.angularVelocity;
+        }
+        this._rigidbody.isKinematic = _frozen;
+        if ( !_frozen ) {
+            this._rigidbody.velocity = _velocityAtStop;
+            this._rigidbody.angularVelocity = _angularVelocityAtStop;
+        }
+    }
+
+    public override void Freeze( bool state ) {
+        _frozen = state;
         if ( _frozen ) {
             _velocityAtStop = this._rigidbody.velocity;
             _angularVelocityAtStop = this._rigidbody.angularVelocity;

@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	    mainCamera = _camera;
+        
 	}
 	
 	// Update is called once per frame
