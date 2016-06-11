@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 [RequireComponent((typeof(Rigidbody)))]
-public class InanimateTimeController : TimeBound {
+public class InanimateTimeController : MonoBehaviour, IFreezable, IHasteable {
     private Rigidbody _rigidbody;
     private Vector3 _velocityAtStop, _angularVelocityAtStop;
     private bool _frozen;
@@ -13,11 +13,11 @@ public class InanimateTimeController : TimeBound {
         _frozen = false;
     }
 
-    public override void FrozenRotation() {
+    public void FrozenRotation() {
         throw new System.NotImplementedException();
     }
 
-    public override void ToggleFreeze() {
+    public void ToggleFreeze() {
         _frozen = !_frozen;
         if ( _frozen ) {
             _velocityAtStop = this._rigidbody.velocity;
@@ -30,7 +30,7 @@ public class InanimateTimeController : TimeBound {
         }
     }
 
-    public override void Freeze( bool state ) {
+    public void Freeze( bool state ) {
         _frozen = state;
         if ( _frozen ) {
             _velocityAtStop = this._rigidbody.velocity;
@@ -41,6 +41,14 @@ public class InanimateTimeController : TimeBound {
             this._rigidbody.velocity = _velocityAtStop;
             this._rigidbody.angularVelocity = _angularVelocityAtStop;
         }
+    }
+
+    public void Haste() {
+        throw new NotImplementedException();
+    }
+
+    public void Unhaste() {
+        throw new NotImplementedException();
     }
 
 #if UNITY_EDITOR
