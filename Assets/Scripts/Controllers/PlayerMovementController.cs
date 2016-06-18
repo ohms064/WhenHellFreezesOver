@@ -18,8 +18,8 @@ public class PlayerMovementController : MonoBehaviour {
 	void Update () {
 	    _rigidbody.MovePosition( _rigidbody.position + (Manager.mainCamera.transform.right * Time.deltaTime * movementSpeed * Input.GetAxis( "Horizontal" )));
         _ray = new Ray(this.transform.position, -this.transform.up);
-	    if ( Physics.Raycast( _ray, out _hit, (this.transform.localScale.y / 2) + 0.5f)) {
-	        _rigidbody.AddForce( this.transform.up * jumpForce * Input.GetAxis( "Jump" ), ForceMode.Impulse );
+	    if ( Physics.Raycast( _ray, out _hit, (this.transform.localScale.y / 2) + 0.5f) && Input.GetKeyDown(KeyCode.Space)) {
+	        _rigidbody.AddForce( this.transform.up * jumpForce, ForceMode.Impulse );
 	    }
 	    
 	}

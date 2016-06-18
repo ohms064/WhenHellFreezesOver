@@ -3,6 +3,6 @@ using System.Collections;
 
 public interface IFreezable {
     void FrozenRotation();
-    void ToggleFreeze();
-    void Freeze( bool state );
+    void Freeze();
+    void Unfreeze();
 }

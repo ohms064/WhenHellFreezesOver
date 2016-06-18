@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 [RequireComponent((typeof(Rigidbody)))]
-public class InanimateTimeController : MonoBehaviour, IFreezable, IHasteable {
+public class InanimateTimeController : MonoBehaviour, IFreezable {
     private Rigidbody _rigidbody;
     private Vector3 _velocityAtStop, _angularVelocityAtStop;
     private bool _frozen;
@@ -17,38 +17,16 @@ public class InanimateTimeController : MonoBehaviour, IFreezable, IHasteable {
         throw new System.NotImplementedException();
     }
 
-    public void ToggleFreeze() {
-        _frozen = !_frozen;
-        if ( _frozen ) {
-            _velocityAtStop = this._rigidbody.velocity;
-            _angularVelocityAtStop = this._rigidbody.angularVelocity;
-        }
-        this._rigidbody.isKinematic = _frozen;
-        if ( !_frozen ) {
-            this._rigidbody.velocity = _velocityAtStop;
-            this._rigidbody.angularVelocity = _angularVelocityAtStop;
-        }
+    public void Unfreeze() {
+        this._rigidbody.isKinematic = false;
+        _rigidbody.AddForce(_velocityAtStop, ForceMode.VelocityChange);
+        _rigidbody.AddTorque(_angularVelocityAtStop, ForceMode.VelocityChange);
     }
 
-    public void Freeze( bool state ) {
-        _frozen = state;
-        if ( _frozen ) {
-            _velocityAtStop = this._rigidbody.velocity;
-            _angularVelocityAtStop = this._rigidbody.angularVelocity;
-        }
-        this._rigidbody.isKinematic = _frozen;
-        if ( !_frozen ) {
-            this._rigidbody.velocity = _velocityAtStop;
-            this._rigidbody.angularVelocity = _angularVelocityAtStop;
-        }
-    }
-
-    public void Haste() {
-        throw new NotImplementedException();
-    }
-
-    public void Unhaste() {
-        throw new NotImplementedException();
+    public void Freeze() {
+        _velocityAtStop = this._rigidbody.velocity;
+        _angularVelocityAtStop = this._rigidbody.angularVelocity;
+        this._rigidbody.isKinematic = true;
     }
 
 #if UNITY_EDITOR

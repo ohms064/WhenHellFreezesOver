@@ -3,23 +3,27 @@ using System.Collections;
 
 public class TimeManager : MonoBehaviour {
     public static IFreezable[] timeBoundObjects;
-    public static bool recording, hasted, slowed; //Estados del juego, si alguno de ellos está activo significa que ese habilidad está activada para algún objeto.
+    public static bool recording, hasted, slowed, frozen; //Estados del juego, si alguno de ellos está activo significa que ese habilidad está activada para algún objeto.
 
 	// Use this for initialization
 	void Start () {
         recording = false;
+        frozen = false;
         timeBoundObjects = InterfaceHelper.FindObjects<IFreezable>();
     }
 
     public static void FreezeScene() {
-        foreach ( IFreezable obj in timeBoundObjects ) {
-            obj.ToggleFreeze();
+        if (frozen) {
+            foreach (IFreezable obj in timeBoundObjects) {
+                obj.Unfreeze();
+            }
+            frozen = false;
         }
-    }
-
-    public static void FreezeScene( bool state ) {
-        foreach ( IFreezable obj in timeBoundObjects ) {
-            obj.Freeze(state);
+        else {
+            foreach (IFreezable obj in timeBoundObjects) {
+                obj.Freeze();
+            }
+            frozen = true;
         }
     }
 
