@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerTimeController : MonoBehaviour {
     public TimeMaster spells; 
 
@@ -14,7 +13,10 @@ public class PlayerTimeController : MonoBehaviour {
 	void Update () {
 
 	    if ( Input.GetKeyDown( KeyCode.Alpha1 ) ) {
-            spells.Freeze.Activate();
+            if(TimeManager.frozen)
+                spells.Freeze.Deactivate();
+            else
+                spells.Freeze.Activate();
 	    }
         if ( Input.GetKeyDown( KeyCode.Alpha2 ) ) {
             spells.Haste.Activate();
