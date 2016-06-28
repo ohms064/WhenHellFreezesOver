@@ -6,17 +6,15 @@ using System;
 public class InanimateTimeController : MonoBehaviour, IFreezable {
     private Rigidbody _rigidbody;
     private Vector3 _velocityAtStop, _angularVelocityAtStop;
-    private bool _frozen;
     private PhysicMaterial _phsxMat;
     // Use this for initialization
     void Start() {
         this._rigidbody = this.GetComponent<Rigidbody>();
-        _frozen = false;
         _phsxMat = this.GetComponent<Collider>().material;
     }
 
-    public void FrozenRotation() {
-        throw new System.NotImplementedException();
+    public void FrozenRotation(Vector3 rotation) {
+        this.transform.LookAt( rotation );
     }
 
     public void Freeze() {
@@ -36,13 +34,12 @@ public class InanimateTimeController : MonoBehaviour, IFreezable {
     }
 
 #if UNITY_EDITOR
-    void OnDrawGizmo() {
-        if ( _frozen ) {
+    void OnDrawGizmos() {
+        if ( TimeManager.frozen ) {
             Gizmos.color = new Color32( 106, 206, 240, 255 );
             Gizmos.DrawWireSphere( this.transform.position, 1.0f );
         }
         else {
-            print("Mirad"  );
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere( this.transform.position, 1.0f );
         }

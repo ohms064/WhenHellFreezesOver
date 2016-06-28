@@ -11,8 +11,9 @@ public class PlayerTimeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-	    if ( Input.GetKeyDown( KeyCode.Alpha1 ) ) {
+        if ( PlayerManager.enviroment.grabingObject )
+            return;
+        if ( Input.GetKeyDown( KeyCode.Alpha1 ) ) {
             if(TimeManager.frozen)
                 spells.Freeze.Deactivate();
             else

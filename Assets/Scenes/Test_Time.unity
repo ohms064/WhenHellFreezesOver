@@ -98,7 +98,7 @@ GameObject:
   - 23: {fileID: 130794478}
   - 54: {fileID: 130794477}
   - 114: {fileID: 130794481}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,8 +112,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 130794475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.62, y: 2.4, z: -1.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.0222, y: 2.4, z: -1.2}
+  m_LocalScale: {x: 0.8139225, y: 0.81392264, z: 0.81392264}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -239,7 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d1b0af9e63b4343b338f37168b01d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 946106387}
 --- !u!1 &770149650
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,9 +253,10 @@ GameObject:
   - 54: {fileID: 770149652}
   - 114: {fileID: 770149651}
   - 114: {fileID: 770149657}
-  m_Layer: 0
+  - 114: {fileID: 770149658}
+  m_Layer: 9
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,6 +359,20 @@ MonoBehaviour:
   jumpTime: 0.1
   movementSpeed: 5
   jumpForce: 2
+--- !u!114 &770149658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770149650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f4a0f490650f749be67d0d8f73727c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabedObject: {fileID: 0}
+  grabRange: 2
+  grabingObject: 0
 --- !u!1 &946106383
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +533,7 @@ GameObject:
   - 23: {fileID: 1841162971}
   - 54: {fileID: 1841162970}
   - 114: {fileID: 1841162969}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,8 +618,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1841162968}
   m_LocalRotation: {x: 0.00064330635, y: 0.022114294, z: -0.35054433, w: 0.93628484}
-  m_LocalPosition: {x: -2.58, y: 2.4, z: -1.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.0241, y: 2.4, z: -1.2}
+  m_LocalScale: {x: 0.8139225, y: 0.81392264, z: 0.81392264}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -620,7 +634,7 @@ GameObject:
   - 33: {fileID: 1845270900}
   - 65: {fileID: 1845270899}
   - 23: {fileID: 1845270898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

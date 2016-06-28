@@ -1,13 +1,20 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+public enum GroundedState {
+    GROUNDED,
+    ON_AIR,
+    SEMI_GROUNDED
+}
+
 [RequireComponent( typeof( Rigidbody ) )]
 public class PlayerMovementController : MonoBehaviour {
     private Rigidbody _rigidbody;
     private bool _jumping;
     private bool _jumpButtonDown;
     private Ray _groundRay;
-    private bool _grounded;
+    private GroundedState _grounded;
+    private float _movement;
 
     public float jumpTime;
     public float movementSpeed = 5.0f;
@@ -21,24 +28,51 @@ public class PlayerMovementController : MonoBehaviour {
 
     // Update is called once per frame
     private void FixedUpdate() {
+        _movement = Input.GetAxis( "Horizontal" );
         _groundRay.origin = this.transform.position - (this.transform.localScale.y / 2) * Vector3.up;
-        _grounded = Physics.Raycast( _groundRay, 0.55f );
+        if(Physics.Raycast( _groundRay, 0.5f ) ) {
+            _grounded = GroundedState.GROUNDED;
+        }
+        else if( TimeManager.frozen && Physics.Raycast( _groundRay, 0.7f, 1 << 10 )){
+            _grounded = GroundedState.SEMI_GROUNDED;
+        }  
+        else {
+            _grounded = GroundedState.ON_AIR;
+        }
+
+        _rigidbody.MovePosition( _rigidbody.position + (Vector3.right * Time.deltaTime * movementSpeed * _movement) );
+        if(_movement < 0 ) {
+            this.transform.right = -Vector3.right;
+        }
+        else if (_movement > 0){
+            this.transform.right = Vector3.right;
+        }
+
         _jumpButtonDown = Input.GetKey( KeyCode.Space );
-        _rigidbody.MovePosition( _rigidbody.position + (Vector3.right * Time.deltaTime * movementSpeed * Input.GetAxis( "Horizontal" )) );
-        if ( _jumpButtonDown && !_jumping && _grounded ) {
-            _jumping = true;
-            StartCoroutine( "JumpCoroutine" );
+        if ( _jumpButtonDown && !_jumping ) {
+            switch ( _grounded ) {
+                case GroundedState.GROUNDED:
+                    _jumping = true;
+                    StartCoroutine( "JumpCoroutine", jumpForce );
+                    break;
+                case GroundedState.SEMI_GROUNDED:
+                    _jumping = true;
+                    StartCoroutine( "JumpCoroutine", jumpForce * 0.75f );
+                    break;
+                case GroundedState.ON_AIR:
+                    break;
+            }
         }
     }
 
-    private IEnumerator JumpCoroutine() {
+    private IEnumerator JumpCoroutine(float force) {
         _rigidbody.velocity = Vector2.zero;
         float timer = 0.0f;
         float jumpPercentage;
         Vector3 frameForce;
         while ( _jumpButtonDown && timer < jumpTime ) {
             jumpPercentage = timer / jumpTime;
-            frameForce = Vector2.Lerp( Vector2.up * jumpForce, Vector2.zero, jumpPercentage );
+            frameForce = Vector2.Lerp( Vector2.up * force, Vector2.zero, jumpPercentage );
             _rigidbody.AddForce( frameForce, ForceMode.VelocityChange );
             timer += Time.deltaTime;
             yield return new WaitForFixedUpdate();
@@ -50,8 +84,20 @@ public class PlayerMovementController : MonoBehaviour {
 
     private void OnDrawGizmos() {
         if ( Application.isPlaying ) {
-            Gizmos.color = _grounded ? Color.red : Color.green;
+            switch ( _grounded ) {
+                case GroundedState.GROUNDED:
+                    Gizmos.color = Color.green;
+                    break;
+                case GroundedState.SEMI_GROUNDED:
+                    Gizmos.color = Color.magenta;
+                    break;
+                case GroundedState.ON_AIR:
+                    Gizmos.color = Color.red;
+                    break;
+            }
             Gizmos.DrawRay( _groundRay );
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay( this.transform.position, this.transform.right );
         }
     }
 
