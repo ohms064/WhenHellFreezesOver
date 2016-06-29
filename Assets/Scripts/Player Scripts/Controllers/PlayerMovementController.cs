@@ -10,12 +10,14 @@ public enum GroundedState {
 [RequireComponent( typeof( Rigidbody ) )]
 public class PlayerMovementController : MonoBehaviour {
     private Rigidbody _rigidbody;
-    private bool _jumping;
+    private bool _isJumping;
     private bool _jumpButtonDown;
     private Ray _groundRay;
     private GroundedState _grounded;
     private float _movement;
 
+    public float runningThresold = 5.0f;
+    public float runningMultiplier = 1.5f;
     public float jumpTime;
     public float movementSpeed = 5.0f;
     public float jumpForce = 5.0f;
@@ -33,7 +35,7 @@ public class PlayerMovementController : MonoBehaviour {
         if(Physics.Raycast( _groundRay, 0.5f ) ) {
             _grounded = GroundedState.GROUNDED;
         }
-        else if( TimeManager.frozen && Physics.Raycast( _groundRay, 0.7f, 1 << 10 )){
+        else if( TimeManager.isFrozen && Physics.Raycast( _groundRay, 0.7f, 1 << 10 )){
             _grounded = GroundedState.SEMI_GROUNDED;
         }  
         else {
@@ -49,14 +51,14 @@ public class PlayerMovementController : MonoBehaviour {
         }
 
         _jumpButtonDown = Input.GetKey( KeyCode.Space );
-        if ( _jumpButtonDown && !_jumping ) {
+        if ( _jumpButtonDown && !_isJumping ) {
             switch ( _grounded ) {
                 case GroundedState.GROUNDED:
-                    _jumping = true;
+                    _isJumping = true;
                     StartCoroutine( "JumpCoroutine", jumpForce );
                     break;
                 case GroundedState.SEMI_GROUNDED:
-                    _jumping = true;
+                    _isJumping = true;
                     StartCoroutine( "JumpCoroutine", jumpForce * 0.75f );
                     break;
                 case GroundedState.ON_AIR:
@@ -77,7 +79,7 @@ public class PlayerMovementController : MonoBehaviour {
             timer += Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
-        _jumping = false;
+        _isJumping = false;
     }
 
 #if UNITY_EDITOR

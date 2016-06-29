@@ -3,20 +3,20 @@ using System.Collections;
 
 public class TimeManager : MonoBehaviour {
     public static IFreezable[] timeBoundObjects;
-    public static bool recording;
-    public static bool frozen;
+    public static bool isRecording;
+    public static bool isFrozen;
 
     // Use this for initialization
     void Start () {
-        recording = false;
+        isRecording = false;
         timeBoundObjects = InterfaceHelper.FindObjects<IFreezable>();
     }
 
     public static void FreezeScene( bool state ) {
-        if ( frozen == state )
+        if ( isFrozen == state )
             return;
-        frozen = state;
-        if ( frozen ) {
+        isFrozen = state;
+        if ( isFrozen ) {
             foreach ( IFreezable obj in timeBoundObjects ) {
                 obj.Freeze();
             }
@@ -29,7 +29,7 @@ public class TimeManager : MonoBehaviour {
     }
 
     public static void StartRecording() {
-        recording = true;
+        isRecording = true;
     }
 
 }
