@@ -32,8 +32,8 @@ public class PlayerEnviromentController : MonoBehaviour {
                 return;
             }
             _mouseRay = Camera.main.ScreenPointToRay( Input.mousePosition );
-            if ( Physics.Raycast( _mouseRay, out _mouseHit, 1 << 10 ) ) {
-                print( LayerMask.GetMask( "EnviromentObjects" ) );
+            if ( Physics.Raycast( _mouseRay, out _mouseHit, Mathf.Infinity, 1024 ) ) {
+                print(_mouseHit.transform.gameObject.layer);
                 
                 
                 grabedObject = _mouseHit.transform;
@@ -64,6 +64,7 @@ public class PlayerEnviromentController : MonoBehaviour {
         grabStatus = GrabStatus.GRABING_OBJECT;
         grabedObject.position = this.transform.position + this.transform.right;
         grabedObject.parent = this.transform;
+        grabedObject.up = Vector3.up;
         grabedObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 

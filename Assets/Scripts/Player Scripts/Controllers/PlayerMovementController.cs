@@ -32,7 +32,7 @@ public class PlayerMovementController : MonoBehaviour {
     private void FixedUpdate() {
         _movement = Input.GetAxis( "Horizontal" );
         _groundRay.origin = this.transform.position - (this.transform.localScale.y / 2) * Vector3.up;
-        if(Physics.Raycast( _groundRay, 0.5f ) ) {
+        if(Physics.Raycast( _groundRay, 0.65f ) ) {
             _grounded = GroundedState.GROUNDED;
         }
         else if( TimeManager.isFrozen && Physics.Raycast( _groundRay, 0.7f, 1 << 10 )){
