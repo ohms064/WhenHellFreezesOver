@@ -18,7 +18,7 @@ public class PlayerMovementController : MonoBehaviour {
 
     public float runningThresold = 5.0f;
     public float runningMultiplier = 1.5f;
-    public float jumpTime;
+    public float jumpTime = 0.1f;
     public float movementSpeed = 5.0f;
     public float jumpForce = 5.0f;
 
@@ -44,10 +44,14 @@ public class PlayerMovementController : MonoBehaviour {
 
         _rigidbody.MovePosition( _rigidbody.position + (Vector3.right * Time.deltaTime * movementSpeed * _movement) );
         if(_movement < 0 ) {
-            this.transform.right = -Vector3.right;
+            PlayerManager.animator.StartRunning();
+            this.transform.right = Vector3.forward;
         }
         else if (_movement > 0){
-            this.transform.right = Vector3.right;
+            PlayerManager.animator.StartRunning();
+            this.transform.right = -Vector3.forward;
+        }else {
+            PlayerManager.animator.StopRunning();
         }
 
         _jumpButtonDown = Input.GetKey( KeyCode.Space );

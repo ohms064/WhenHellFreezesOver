@@ -1,94 +1,70 @@
 fileFormatVersion: 2
-guid: a409a813ac61775499e1170111c57c84
-timeCreated: 1463959875
+guid: a6d7f73ee02cc8b419e19a1168b57b4d
+timeCreated: 1468080052
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     100002: Body
-    100004: Body_Bone
-    100006: Body_Bone2
-    100008: Body_Chain
-    100010: Body_NeutralPose
-    100012: bone11
-    100014: bone15
-    100016: eff
-    100018: eff1
-    100020: eff2
-    100022: eff3
-    100024: eff4
-    100026: Hair_Back
-    100028: Hair_Center
-    100030: Hair_Center1
-    100032: Hair_Center2
-    100034: Hair_Center3
-    100036: Hair_Front
-    100038: Hair_Front_NeutralPose
-    100040: Head
-    100042: Head_Bone
-    100044: Left_Arm_Bone
-    100046: Left_Arm_Chain
-    100048: Left_Foot
-    100050: Left_Foot_Bone
-    100052: Left_Hand
-    100054: Left_Leg_Bone
-    100056: Left_Leg_Chain
-    100058: Left_Toes_Bones
-    100060: Pants
-    100062: Pants_NeutralPose
-    100064: Right_Arm_Bone
-    100066: Right_Arm_Chain
-    100068: Right_Foot
-    100070: Right_Foot_Bone
-    100072: Right_Hand
-    100074: Right_Leg_Bone
-    100076: Right_Leg_Chain
-    100078: Right_Toes_Bones
-    100080: root4
-    100082: Texture_Support
+    100004: Hair_Back
+    100006: Hair_Center
+    100008: Hair_Center1
+    100010: Hair_Center2
+    100012: Hair_Center3
+    100014: Hair_Front
+    100016: Hair_Front_NeutralPose
+    100018: Head
+    100020: Left_Foot
+    100022: Left_Hand
+    100024: Pants
+    100026: Pants_NeutralPose
+    100028: Right_Foot
+    100030: Right_Hand
+    100032: Texture_Support
     400000: //RootNode
     400002: Body
-    400004: Body_Bone
-    400006: Body_Bone2
-    400008: Body_Chain
-    400010: Body_NeutralPose
-    400012: bone11
-    400014: bone15
-    400016: eff
-    400018: eff1
-    400020: eff2
-    400022: eff3
-    400024: eff4
-    400026: Hair_Back
-    400028: Hair_Center
-    400030: Hair_Center1
-    400032: Hair_Center2
-    400034: Hair_Center3
-    400036: Hair_Front
-    400038: Hair_Front_NeutralPose
-    400040: Head
-    400042: Head_Bone
-    400044: Left_Arm_Bone
-    400046: Left_Arm_Chain
-    400048: Left_Foot
-    400050: Left_Foot_Bone
-    400052: Left_Hand
-    400054: Left_Leg_Bone
-    400056: Left_Leg_Chain
-    400058: Left_Toes_Bones
-    400060: Pants
-    400062: Pants_NeutralPose
-    400064: Right_Arm_Bone
-    400066: Right_Arm_Chain
-    400068: Right_Foot
-    400070: Right_Foot_Bone
-    400072: Right_Hand
-    400074: Right_Leg_Bone
-    400076: Right_Leg_Chain
-    400078: Right_Toes_Bones
-    400080: root4
-    400082: Texture_Support
+    400004: Hair_Back
+    400006: Hair_Center
+    400008: Hair_Center1
+    400010: Hair_Center2
+    400012: Hair_Center3
+    400014: Hair_Front
+    400016: Hair_Front_NeutralPose
+    400018: Head
+    400020: Left_Foot
+    400022: Left_Hand
+    400024: Pants
+    400026: Pants_NeutralPose
+    400028: Right_Foot
+    400030: Right_Hand
+    400032: Texture_Support
+    2300000: Body
+    2300002: Hair_Back
+    2300004: Hair_Center
+    2300006: Hair_Center1
+    2300008: Hair_Center2
+    2300010: Hair_Center3
+    2300012: Hair_Front
+    2300014: Head
+    2300016: Left_Foot
+    2300018: Left_Hand
+    2300020: Pants
+    2300022: Right_Foot
+    2300024: Right_Hand
+    3300000: Body
+    3300002: Hair_Back
+    3300004: Hair_Center
+    3300006: Hair_Center1
+    3300008: Hair_Center2
+    3300010: Hair_Center3
+    3300012: Hair_Front
+    3300014: Head
+    3300016: Left_Foot
+    3300018: Left_Hand
+    3300020: Pants
+    3300022: Right_Foot
+    3300024: Right_Hand
     4300000: Body
     4300002: Head
     4300004: Hair_Center
@@ -102,25 +78,8 @@ ModelImporter:
     4300020: Pants
     4300022: Left_Foot
     4300024: Right_Foot
-    7400000: Start Run
-    7400002: Running
-    7400004: Stop
-    7400006: Idle
-    7400008: Running_Right_Foot
+    7400000: Take 001
     9500000: //RootNode
-    13700000: Body
-    13700002: Hair_Back
-    13700004: Hair_Center
-    13700006: Hair_Center1
-    13700008: Hair_Center2
-    13700010: Hair_Center3
-    13700012: Hair_Front
-    13700014: Head
-    13700016: Left_Foot
-    13700018: Left_Hand
-    13700020: Pants
-    13700022: Right_Foot
-    13700024: Right_Hand
   materials:
     importMaterials: 1
     materialName: 0
@@ -141,459 +100,11 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Start Run
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 10
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Body_Chain
-        weight: 1
-      - path: Body_Chain/Body_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone/eff
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone/eff2
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15/eff4
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone/eff1
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11/eff3
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/root4
-        weight: 1
-      - path: Body_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body
-        weight: 1
-      - path: Body_NeutralPose/Body/Head
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Back
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center1
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center2
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center3
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose/Hair_Front
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Texture_Support
-        weight: 1
-      - path: Body_NeutralPose/Body/Left_Hand
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Left_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Right_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Right_Hand
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
-    - serializedVersion: 16
-      name: Running
-      takeName: Take 001
-      firstFrame: 11
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Body_Chain
-        weight: 1
-      - path: Body_Chain/Body_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone/eff
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone/eff2
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15/eff4
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone/eff1
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11/eff3
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/root4
-        weight: 1
-      - path: Body_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body
-        weight: 1
-      - path: Body_NeutralPose/Body/Head
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Back
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center1
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center2
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center3
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose/Hair_Front
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Texture_Support
-        weight: 1
-      - path: Body_NeutralPose/Body/Left_Hand
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Left_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Right_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Right_Hand
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
-    - serializedVersion: 16
-      name: Stop
-      takeName: Take 001
-      firstFrame: 61
-      lastFrame: 70
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Body_Chain
-        weight: 1
-      - path: Body_Chain/Body_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone/eff
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone/eff2
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15/eff4
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone/eff1
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11/eff3
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/root4
-        weight: 1
-      - path: Body_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body
-        weight: 1
-      - path: Body_NeutralPose/Body/Head
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Back
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center1
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center2
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center3
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose/Hair_Front
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Texture_Support
-        weight: 1
-      - path: Body_NeutralPose/Body/Left_Hand
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Left_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Right_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Right_Hand
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
-    - serializedVersion: 16
-      name: Idle
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 2
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Body_Chain
-        weight: 1
-      - path: Body_Chain/Body_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone
-        weight: 1
-      - path: Body_Chain/Body_Bone/Body_Bone2/Head_Bone/eff
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Left_Arm_Chain/Left_Arm_Bone/eff2
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15
-        weight: 1
-      - path: Body_Chain/Left_Leg_Chain/Left_Leg_Bone/Left_Foot_Bone/Left_Toes_Bones/bone15/eff4
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone
-        weight: 1
-      - path: Body_Chain/Right_Arm_Chain/Right_Arm_Bone/eff1
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/Right_Leg_Bone/Right_Foot_Bone/Right_Toes_Bones/bone11/eff3
-        weight: 1
-      - path: Body_Chain/Right_Leg_Chain/root4
-        weight: 1
-      - path: Body_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body
-        weight: 1
-      - path: Body_NeutralPose/Body/Head
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Back
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center1
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center2
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Center3
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Hair_Front_NeutralPose/Hair_Front
-        weight: 1
-      - path: Body_NeutralPose/Body/Head/Texture_Support
-        weight: 1
-      - path: Body_NeutralPose/Body/Left_Hand
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Left_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Pants_NeutralPose/Pants/Right_Foot
-        weight: 1
-      - path: Body_NeutralPose/Body/Right_Hand
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 50
+    globalScale: 25
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

@@ -2,15 +2,17 @@
 using System.Collections;
 
 public class PlayerManager : MonoBehaviour{
-    public static GameObject main;
+    public static GameObject player;
     public static PlayerEnviromentController enviroment;
     public static PlayerTimeController time;
     public static PlayerMovementController movement;
+    public static PlayerAnimationController animator;
 
     void Awake() {
-        main = GameObject.FindGameObjectWithTag( "Player" );
-        enviroment = main.GetComponent<PlayerEnviromentController>();
-        time = main.GetComponent<PlayerTimeController>();
-        movement = main.GetComponent<PlayerMovementController>();
+        player = GameObject.FindGameObjectWithTag( "Player" );
+        enviroment = player.GetComponent<PlayerEnviromentController>();
+        time = player.GetComponent<PlayerTimeController>();
+        movement = player.GetComponent<PlayerMovementController>();
+        animator = player.GetComponent<PlayerAnimationController>();
     }
 }

@@ -62,7 +62,7 @@ public class PlayerEnviromentController : MonoBehaviour {
 
     void Grab() {
         grabStatus = GrabStatus.GRABING_OBJECT;
-        grabedObject.position = this.transform.position + this.transform.right;
+        grabedObject.position = this.transform.position + this.transform.forward;
         grabedObject.parent = this.transform;
         grabedObject.up = Vector3.up;
         grabedObject.GetComponent<Rigidbody>().isKinematic = true;
