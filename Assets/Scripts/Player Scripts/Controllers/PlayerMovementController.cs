@@ -44,14 +44,14 @@ public class PlayerMovementController : MonoBehaviour {
 
         _rigidbody.MovePosition( _rigidbody.position + (Vector3.right * Time.deltaTime * movementSpeed * _movement) );
         if(_movement < 0 ) {
-            PlayerManager.animator.StartRunning();
+            //PlayerManager.animator.StartRunning();
             this.transform.right = Vector3.forward;
         }
         else if (_movement > 0){
-            PlayerManager.animator.StartRunning();
+            //PlayerManager.animator.StartRunning();
             this.transform.right = -Vector3.forward;
         }else {
-            PlayerManager.animator.StopRunning();
+            //PlayerManager.animator.StopRunning();
         }
 
         _jumpButtonDown = Input.GetKey( KeyCode.Space );

@@ -25,20 +25,26 @@ public class InanimateTimeController : MonoBehaviour, IFreezable {
     public void Freeze() {
         _directionAtStop = this._rigidbody.velocity;
         _speedAtStop = _directionAtStop.magnitude;
-        _directionAtStop /= _speedAtStop;
+        if ( _speedAtStop != 0.0f ) {
+            _directionAtStop /= _speedAtStop;
+        }
         _angularVelocityAtStop = this._rigidbody.angularVelocity;
         _forceUpAngle = Vector3.Angle(this.transform.up, _directionAtStop);
         _phsxMat.dynamicFriction = 0.0f; //Para que el personaje no se pegue a el.
         _phsxMat.staticFriction = 0.0f;
         this._rigidbody.isKinematic = true;
+        GetComponent<Renderer>().material.color = Color.cyan;
     }
 
     public void Unfreeze() {
         this._rigidbody.isKinematic = false;
-        this._rigidbody.AddForce( _directionAtStop * _speedAtStop, ForceMode.VelocityChange );
-        this._rigidbody.AddTorque( _angularVelocityAtStop, ForceMode.VelocityChange );
+        if ( _speedAtStop != 0.0f ) {
+            this._rigidbody.AddForce( _directionAtStop * _speedAtStop, ForceMode.VelocityChange );
+            this._rigidbody.AddTorque( _angularVelocityAtStop, ForceMode.VelocityChange );
+        }
         _phsxMat.dynamicFriction = 1.0f;
         _phsxMat.staticFriction = 1.0f;
+        GetComponent<Renderer>().material.color = Color.red;
     }
 
 #if UNITY_EDITOR
