@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class PlayerAnimationController : MonoBehaviour {
-    private Animator _playerAnimator;
+    public Animator _playerAnimator;
     private float _movimiento;
     private bool _isRunning;
     // Use this for initialization
     void Start() {
-        _playerAnimator = this.GetComponent<Animator>();
+        //_playerAnimator = this.GetComponent<Animator>();
     }
 
     public void StartRunning() {

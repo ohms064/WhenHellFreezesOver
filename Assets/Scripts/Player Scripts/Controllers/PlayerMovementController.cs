@@ -30,7 +30,7 @@ public class PlayerMovementController : MonoBehaviour {
 
     // Update is called once per frame
     private void FixedUpdate() {
-        _movement = Input.GetAxis( "Horizontal" );
+        //Is the character on the floor?
         _groundRay.origin = this.transform.position - (this.transform.localScale.y / 2) * Vector3.up;
         if(Physics.Raycast( _groundRay, 0.65f ) ) {
             _grounded = GroundedState.GROUNDED;
@@ -42,16 +42,18 @@ public class PlayerMovementController : MonoBehaviour {
             _grounded = GroundedState.ON_AIR;
         }
 
+        //Move the character
+        _movement = Input.GetAxis( "Horizontal" );
         _rigidbody.MovePosition( _rigidbody.position + (Vector3.right * Time.deltaTime * movementSpeed * _movement) );
-        if(_movement < 0 ) {
-            //PlayerManager.animator.StartRunning();
-            this.transform.right = Vector3.forward;
-        }
-        else if (_movement > 0){
-            //PlayerManager.animator.StartRunning();
+        if(_movement > 0.02f ) {
+            PlayerManager.animator.StartRunning();
             this.transform.right = -Vector3.forward;
+        }
+        else if (_movement < -0.02f ){
+            PlayerManager.animator.StartRunning();
+            this.transform.right = Vector3.forward;
         }else {
-            //PlayerManager.animator.StopRunning();
+            PlayerManager.animator.StopRunning();
         }
 
         _jumpButtonDown = Input.GetKey( KeyCode.Space );
