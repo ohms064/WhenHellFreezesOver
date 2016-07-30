@@ -10,6 +10,7 @@ public enum GrabStatus {
 public class PlayerEnviromentController : MonoBehaviour {
     public float rotationSensitivity = 2.0f;
     public float grabRange = 5.0f;
+    public float objectsDamage = 1.0f;
 
     [HideInInspector]
     public GrabStatus grabStatus;

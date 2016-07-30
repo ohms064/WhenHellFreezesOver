@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour{
     public static PlayerTimeController time;
     public static PlayerMovementController movement;
     public static PlayerAnimationController animator;
+    public static PlayerLifeController life;
 
     void Awake() {
         player = GameObject.FindGameObjectWithTag( "Player" );
@@ -14,5 +15,6 @@ public class PlayerManager : MonoBehaviour{
         time = player.GetComponent<PlayerTimeController>();
         movement = player.GetComponent<PlayerMovementController>();
         animator = player.GetComponent<PlayerAnimationController>();
+        life = player.GetComponent<PlayerLifeController>();
     }
 }
