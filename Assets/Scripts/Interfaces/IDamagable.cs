@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections;
+using UnityEngine;
 
 interface IDamagable {
-    void ReceiveDamage(float damageDone);
+    void ReceiveDamage(float damageDone, Collider fromWho);
     void Die();
 }

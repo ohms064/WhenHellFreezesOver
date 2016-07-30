@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour{
     public static PlayerMovementController movement;
     public static PlayerAnimationController animator;
     public static PlayerLifeController life;
+    public static Collider collider;
 
     void Awake() {
         player = GameObject.FindGameObjectWithTag( "Player" );
@@ -16,5 +17,6 @@ public class PlayerManager : MonoBehaviour{
         movement = player.GetComponent<PlayerMovementController>();
         animator = player.GetComponent<PlayerAnimationController>();
         life = player.GetComponent<PlayerLifeController>();
+        collider = player.GetComponent<Collider>();
     }
 }

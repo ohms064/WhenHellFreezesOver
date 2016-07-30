@@ -88,6 +88,10 @@ public class PlayerMovementController : MonoBehaviour {
         _isJumping = false;
     }
 
+    public void PushedTo(Vector3 direction) {
+        _rigidbody.AddForce(direction, ForceMode.Impulse);
+    }
+
 #if UNITY_EDITOR
 
     private void OnDrawGizmos() {
