@@ -67,7 +67,7 @@ using System.Collections;
         IFreezable frozenObject = grabedObject.GetComponent<IFreezable>();
         Vector3 mouseStartPosition = Input.mousePosition;
         Vector3 mouseVector;
-        while ( Input.GetMouseButton( 0 ) && Vector3.Distance(this.transform.position, grabedObject.position) < grabRange){
+        while ( Input.GetMouseButton( 0 ) ) { //Limitante de distancia && Vector3.Distance(this.transform.position, grabedObject.position) < grabRange
             mouseVector = Input.mousePosition - mouseStartPosition;
             frozenObject.FrozenRotation((mouseVector.x + mouseVector.y) * -rotationSensitivity);
             yield return new WaitForEndOfFrame();
