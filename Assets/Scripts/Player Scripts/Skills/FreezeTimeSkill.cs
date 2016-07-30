@@ -2,9 +2,15 @@
 using System.Collections;
 
 public class  FreezeTimeSkill : Skill  {
+
+    public FreezeTimeSkill() {
+
+    }
+
     public override void Activate() {
         TimeManager.FreezeScene(true);
     }
+
     public override void Deactivate() {
         TimeManager.FreezeScene(false);
     }

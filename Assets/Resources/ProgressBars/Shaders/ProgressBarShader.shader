@@ -118,6 +118,7 @@
 					return color;
 				if (progressUV.r <= _ProgressionVal) {
 					color.rgb = _Color2;
+					
 				}
 				return color;
 			}

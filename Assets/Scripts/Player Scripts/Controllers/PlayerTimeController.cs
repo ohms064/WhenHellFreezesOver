@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class PlayerTimeController : MonoBehaviour {
-    public TimeMaster spells; 
+    private TimeMaster spells;
+    private FreezeJson freezeData;
+    public ProgressBar frozenBar;
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +16,14 @@ public class PlayerTimeController : MonoBehaviour {
         if ( PlayerManager.enviroment.grabStatus != GrabStatus.HANDS_FREE )
             return;
         if ( Input.GetKeyDown( KeyCode.Alpha1 ) ) {
-            if(TimeManager.isFrozen)
+            if (TimeManager.isFrozen) {
                 spells.Freeze.Deactivate();
-            else
+                StopCoroutine("FreezeDuration");
+            }
+            else {
                 spells.Freeze.Activate();
+                StartCoroutine("FreezeDuration");
+            }
 	    }
         if ( Input.GetKeyDown( KeyCode.Alpha2 ) ) {
             spells.Haste.Activate();
@@ -27,6 +33,17 @@ public class PlayerTimeController : MonoBehaviour {
         }
         if ( Input.GetKeyDown( KeyCode.Alpha4 ) ) {
             spells.Rewind.Start();
+        }
+    }
+
+    IEnumerator FreezeDuration() {
+        float initTime = Time.time;
+        while (Time.time - initTime < 5.0f) {
+            yield return new WaitForEndOfFrame();
+            frozenBar.SetPercentage(Mathf.InverseLerp(5.0f, 0.0f, Time.time - initTime));
+        }
+        if (TimeManager.isFrozen) {
+            spells.Freeze.Deactivate();
         }
     }
 }

@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ProgressMaterial(Square)
+  m_Name: Frozen Bar
   m_Shader: {fileID: 4800000, guid: 803ece4d98429884084a06c1effcfce6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -82,14 +82,14 @@ Material:
         first:
           name: _TransMask
         second:
-          m_Texture: {fileID: 2800000, guid: 5089805fb56e1f746a3bf5d433eb3343, type: 3}
+          m_Texture: {fileID: 2800000, guid: ac4dd4308dd771d41b8779f1534a6630, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _ProgressionMask
         second:
-          m_Texture: {fileID: 2800000, guid: bc0c8478df5d0d44f9ff4b1de9254038, type: 3}
+          m_Texture: {fileID: 2800000, guid: 336b4eb2711e8be42a45f4d9b9a36b64, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -168,11 +168,11 @@ Material:
       data:
         first:
           name: _TransVal
-        second: 0.462
+        second: 1
       data:
         first:
           name: _ProgressionVal
-        second: 0
+        second: 1
     m_Colors:
       data:
         first:
@@ -185,4 +185,4 @@ Material:
       data:
         first:
           name: _Color2
-        second: {r: 0.38203606, g: 0.9044118, b: 0.33915442, a: 0}
+        second: {r: 0.23826772, g: 0.65922844, b: 0.8308824, a: 1}

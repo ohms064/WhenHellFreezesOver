@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum GrabStatus {
-    GRABING_OBJECT,
-    ROTATING_OBJECT,
-    HANDS_FREE
-}
-
-public class PlayerEnviromentController : MonoBehaviour {
+ public class PlayerEnviromentController : MonoBehaviour {
     public float rotationSensitivity = 2.0f;
     public float grabRange = 5.0f;
     public float objectsDamage = 1.0f;

@@ -1,12 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public enum GroundedState {
-    GROUNDED,
-    ON_AIR,
-    SEMI_GROUNDED
-}
-
 [RequireComponent( typeof( Rigidbody ) )]
 public class PlayerMovementController : MonoBehaviour {
     private Rigidbody _rigidbody;

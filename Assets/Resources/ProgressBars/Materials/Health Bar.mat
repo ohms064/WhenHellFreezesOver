@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ProgressMaterial
+  m_Name: Health Bar
   m_Shader: {fileID: 4800000, guid: 803ece4d98429884084a06c1effcfce6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -185,4 +185,4 @@ Material:
       data:
         first:
           name: _Color2
-        second: {r: 0.23826772, g: 0.8308824, b: 0.41400862, a: 0}
+        second: {r: 0.210532, g: 0.86764705, b: 0.40540057, a: 0}
