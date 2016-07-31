@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 451260}
   - 137: {fileID: 13705796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 429024}
   - 137: {fileID: 13717278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair_Center2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 406362}
   - 33: {fileID: 3328380}
   - 23: {fileID: 2363736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 402272}
   - 33: {fileID: 3358350}
   - 23: {fileID: 2396900}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - 4: {fileID: 438834}
   - 33: {fileID: 3344916}
   - 23: {fileID: 2393050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 494540}
   - 137: {fileID: 13750478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 422890}
   - 95: {fileID: 9509192}
-  m_Layer: 0
+  - 65: {fileID: 6522352}
+  m_Layer: 9
   m_Name: AlexBones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +126,7 @@ GameObject:
   - 4: {fileID: 456048}
   - 33: {fileID: 3362260}
   - 23: {fileID: 2352264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +142,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 412780}
   - 137: {fileID: 13713450}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +158,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 465232}
   - 137: {fileID: 13777790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair_Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +174,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 434574}
   - 137: {fileID: 13700150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +190,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417720}
   - 137: {fileID: 13784850}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair_Center3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +206,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 486226}
   - 137: {fileID: 13783976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +222,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 442610}
   - 137: {fileID: 13768216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair_Center1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +238,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 462824}
   - 137: {fileID: 13717688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +254,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460330}
   - 137: {fileID: 13740318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +271,7 @@ GameObject:
   - 4: {fileID: 442676}
   - 33: {fileID: 3335812}
   - 23: {fileID: 2302930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +288,7 @@ GameObject:
   - 4: {fileID: 411072}
   - 33: {fileID: 3303024}
   - 23: {fileID: 2310006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +304,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 437046}
   - 137: {fileID: 13758218}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +320,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405474}
   - 137: {fileID: 13738988}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +337,6 @@ GameObject:
   - 4: {fileID: 495044}
   - 33: {fileID: 3377830}
   - 136: {fileID: 13638746}
-  - 23: {fileID: 2324010}
   - 54: {fileID: 5447964}
   - 114: {fileID: 11466432}
   - 114: {fileID: 11404836}
@@ -636,7 +636,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197818}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 1.94, y: 3.84, z: 0}
+  m_LocalPosition: {x: 2.62, y: 3.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children:
@@ -680,32 +680,6 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: 2516b3e78d462214ead48090973e6209, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!23 &2324010
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197818}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -889,6 +863,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!65 &6522352
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: -0.05, z: 0.47}
+  m_Center: {x: 0, y: -0.98, z: 0}
 --- !u!95 &9509192
 Animator:
   serializedVersion: 3
@@ -982,13 +968,13 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197818}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6193317261bcaa4498a81fcee06b4bb, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1.69
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.14, z: 0}
 --- !u!137 &13700150
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

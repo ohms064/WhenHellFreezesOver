@@ -38,7 +38,12 @@ using System.Collections;
                     return;
                 }
                 if ( Vector3.Distance( grabedObject.position, this.transform.position ) < grabRange ) {
-                    Grab();
+                    if ( _mouseHit.transform.CompareTag( "Puzzle Cube" ) ) {
+                        Grab();
+                    }
+                    else if ( _mouseHit.transform.CompareTag( "Switch" ) ) {
+                        _mouseHit.transform.SendMessage( "OnClicked" );
+                    }
                 }
                 else {
                     grabedObject = null;

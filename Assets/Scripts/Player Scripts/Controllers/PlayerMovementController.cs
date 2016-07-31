@@ -26,7 +26,7 @@ public class PlayerMovementController : MonoBehaviour {
     private void FixedUpdate() {
         //Is the character on the floor?
         _groundRay.origin = this.transform.position - (this.transform.localScale.y / 2) * Vector3.up;
-        if(Physics.Raycast( _groundRay, 0.65f ) ) {
+        if(Physics.Raycast( _groundRay, 0.65f , 1535) ) {
             _grounded = GroundedState.GROUNDED;
         }
         else if( TimeManager.isFrozen && Physics.Raycast( _groundRay, 0.7f, 1 << 10 )){
