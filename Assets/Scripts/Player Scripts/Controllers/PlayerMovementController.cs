@@ -9,6 +9,7 @@ public class PlayerMovementController : MonoBehaviour {
     private Ray _groundRay;
     private GroundedState _grounded;
     private float _movement;
+    private const int JUMP_LAYER_MASK = 1531;
 
     public float runningThresold = 5.0f;
     public float runningMultiplier = 1.5f;
@@ -26,7 +27,7 @@ public class PlayerMovementController : MonoBehaviour {
     private void FixedUpdate() {
         //Is the character on the floor?
         _groundRay.origin = this.transform.position - (this.transform.localScale.y / 2) * Vector3.up;
-        if(Physics.Raycast( _groundRay, 0.65f , 1535) ) {
+        if(Physics.Raycast( _groundRay, 0.65f , JUMP_LAYER_MASK ) ) {
             _grounded = GroundedState.GROUNDED;
         }
         else if( TimeManager.isFrozen && Physics.Raycast( _groundRay, 0.7f, 1 << 10 )){

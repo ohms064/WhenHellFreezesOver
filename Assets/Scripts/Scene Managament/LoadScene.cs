@@ -4,15 +4,26 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour {
 
-    Scenes sceneToLoad;
+    public Scenes sceneToLoad;
     public float waitTime;
+    public Scenes sceneToSave;
+    public bool saveOnLoad;
 
     void OnTriggerEnter(Collider col) {
-        Invoke( "SceneLoad", waitTime );
+        InvokeScene();
     }
 
-    private void SceneLoad() {
+    public void SceneLoad() {
         SceneManager.LoadScene( (int)sceneToLoad );
+        if ( saveOnLoad ) {
+            FileManager files = FileManager.instance;
+            files.currentGameStatusJson.lastLevel = sceneToSave;
+            files.SaveGameStatusJson();
+        }
+    }
+
+    public void InvokeScene() {
+        Invoke( "SceneLoad", waitTime );
     }
 
 }

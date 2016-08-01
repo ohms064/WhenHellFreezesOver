@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerTimeController : MonoBehaviour {
     private TimeMaster spells;
     private FreezeJson freezeData;
-    private FreezeJson frozenJson;
+    private float frozenTime;
     public ProgressBar frozenBar;
 
 
@@ -12,10 +12,10 @@ public class PlayerTimeController : MonoBehaviour {
 	void Start () {
         spells = new TimeMaster( new FreezeTimeSkill(), new Skill(), new Skill(), new Skill() );
         if ( FileManager.instance != null ) {
-            frozenJson = FileManager.instance.LoadFrozenJson();
+            frozenTime = FileManager.instance.currentFreezeJson.freezeTime;
         }
         else {
-            frozenJson = new FreezeJson( 5.0f );
+            frozenTime = 5.0f;
         }
     }
 	
@@ -44,9 +44,9 @@ public class PlayerTimeController : MonoBehaviour {
 
     IEnumerator FreezeDuration() {
         float initTime = Time.time;
-        while (Time.time - initTime < frozenJson.freezeTime) {
+        while (Time.time - initTime < frozenTime) {
             yield return new WaitForEndOfFrame();
-            frozenBar.SetPercentage(Mathf.InverseLerp( frozenJson.freezeTime, 0.0f, Time.time - initTime));
+            frozenBar.SetPercentage(Mathf.InverseLerp( frozenTime, 0.0f, Time.time - initTime));
         }
         if (TimeManager.isFrozen) {
             spells.Freeze.Deactivate();

@@ -7,26 +7,71 @@ public class FileManager : MonoBehaviour {
 
     [HideInInspector] public static FileManager instance;
     public string frozenJsonFileName;
-    [SerializeField]
-    public FreezeJson frozenDefaultJson;
+    public string gameStatusJsonFileName;
+
+
+    [SerializeField] private FreezeJson _frozenDefaultJson;
+    [SerializeField] private GameStatusJSON _gameStatusDefaultJson;
+
+    [HideInInspector] public FreezeJson currentFreezeJson;
+    [HideInInspector] public GameStatusJSON currentGameStatusJson;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         instance = this;
         DontDestroyOnLoad( this.gameObject );
-	}
+#if UNITY_EDITOR
+        frozenJsonFileName = "GameData/" + frozenJsonFileName;
+        gameStatusJsonFileName = "GameData/" + gameStatusJsonFileName;
+#elif UNITY_STANDALONE
+        frozenJsonFileName = "WhenHellFreezesOver_Data/Resources/" + frozenJsonFileName;
+        gameStatusJsonFileName = "WhenHellFreezesOver_Data/Resources/" + gameStatusJsonFileName;
+#endif
+        LoadAll();
+    }
 
-    public FreezeJson LoadFrozenJson() {
-        if ( !File.Exists( frozenJsonFileName )) return frozenDefaultJson;
+    public void LoadAll() {
+        LoadGameStatusJson();
+        LoadFrozenJson();
+    }
+
+    public void LoadFrozenJson() {
+        if ( !File.Exists( frozenJsonFileName ) ) {
+            currentFreezeJson = _frozenDefaultJson;
+            SaveFrozenJson();
+        }
         StreamReader sr = new StreamReader( frozenJsonFileName );
         string fileString = sr.ReadToEnd();
-        return JsonUtility.FromJson<FreezeJson>( fileString );
+
+        currentFreezeJson = JsonUtility.FromJson<FreezeJson>( fileString );
+        sr.Close();        
     }
 
-    void SaveFrozenJson( FreezeJson frozenJson) {
+    public void SaveFrozenJson() {
         StreamWriter sw = new StreamWriter( frozenJsonFileName );
-        sw.Write( JsonUtility.ToJson( frozenJson ) );
+        sw.Write( JsonUtility.ToJson( currentFreezeJson ) );
+        sw.Close();
     }
-	
-	
+
+    public void LoadGameStatusJson() {
+        if ( !File.Exists( gameStatusJsonFileName ) ) {
+            currentGameStatusJson = _gameStatusDefaultJson;
+            SaveGameStatusJson();
+        }
+        StreamReader sr = new StreamReader( gameStatusJsonFileName );
+        string fileString = sr.ReadToEnd();
+        currentGameStatusJson = JsonUtility.FromJson<GameStatusJSON>( fileString );
+        sr.Close();
+    }
+
+    public void SaveGameStatusJson() {
+        StreamWriter sw = new StreamWriter( gameStatusJsonFileName );
+        sw.Write( JsonUtility.ToJson( currentGameStatusJson ) );
+        sw.Close();
+    }
+
+    public void SaveAll() {
+        SaveFrozenJson();
+        SaveGameStatusJson();
+    }
 }
