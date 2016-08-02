@@ -6,8 +6,8 @@ using System.IO;
 public class FileManager : MonoBehaviour {
 
     [HideInInspector] public static FileManager instance;
-    public string frozenJsonFileName;
-    public string gameStatusJsonFileName;
+    [SerializeField] private string frozenJsonFileName;
+    [SerializeField] private string gameStatusJsonFileName;
 
 
     [SerializeField] private FreezeJson _frozenDefaultJson;
@@ -73,5 +73,17 @@ public class FileManager : MonoBehaviour {
     public void SaveAll() {
         SaveFrozenJson();
         SaveGameStatusJson();
+    }
+
+    public void ResetAll() {
+        File.Delete( gameStatusJsonFileName );
+        File.Delete( frozenJsonFileName );
+        LoadAll();
+    }
+
+    public void ResetLevels() {
+        currentGameStatusJson.lastLevel = _gameStatusDefaultJson.lastLevel;
+        SaveGameStatusJson();
+        FindObjectOfType<LoadScene>().sceneToLoad = currentGameStatusJson.lastLevel;
     }
 }

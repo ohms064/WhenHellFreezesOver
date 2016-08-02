@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour, IFreezable {
     }
 
     void OnCollisionEnter(Collision coll) {
-        if (coll.transform.CompareTag("PuzzleElement")) {
+        if (coll.transform.CompareTag("Puzzle Cube")) {
             Rotate();
         }
     }
