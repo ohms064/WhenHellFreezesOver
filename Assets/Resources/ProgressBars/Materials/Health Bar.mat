@@ -168,7 +168,7 @@ Material:
       data:
         first:
           name: _TransVal
-        second: 0
+        second: 0.482
       data:
         first:
           name: _ProgressionVal
