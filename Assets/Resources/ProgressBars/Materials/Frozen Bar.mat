@@ -168,11 +168,11 @@ Material:
       data:
         first:
           name: _TransVal
-        second: 0.7349334
+        second: 1
       data:
         first:
           name: _ProgressionVal
-        second: 1
+        second: 0.20522347
     m_Colors:
       data:
         first:
