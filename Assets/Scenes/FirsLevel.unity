@@ -2301,9 +2301,9 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ea9f2642b89790e44b762850af49be51, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -2364,6 +2364,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &407871513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407871508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daa10650ba118445862099fc2d8dd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &439229687
 Prefab:
   m_ObjectHideFlags: 0
@@ -2406,6 +2417,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af11724f6729c4641a6359db3ea1b9b5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &492235434 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 186216, guid: af11724f6729c4641a6359db3ea1b9b5, type: 2}
+  m_PrefabInternal: {fileID: 619930812}
+--- !u!114 &492235439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 492235434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daa10650ba118445862099fc2d8dd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &619930812
 Prefab:
   m_ObjectHideFlags: 0
@@ -5088,6 +5114,21 @@ Mesh:
 Transform:
   m_PrefabParentObject: {fileID: 476684, guid: af11724f6729c4641a6359db3ea1b9b5, type: 2}
   m_PrefabInternal: {fileID: 439229687}
+--- !u!1 &1583801372 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 186216, guid: af11724f6729c4641a6359db3ea1b9b5, type: 2}
+  m_PrefabInternal: {fileID: 439229687}
+--- !u!114 &1583801377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583801372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daa10650ba118445862099fc2d8dd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1611889656
 Mesh:
   m_ObjectHideFlags: 0
