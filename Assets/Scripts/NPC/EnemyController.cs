@@ -5,9 +5,9 @@ using System;
 [RequireComponent(typeof(Rigidbody))]
 //Uses enum grounded state
 public class EnemyController : MonoBehaviour, IFreezable {
-    public Rigidbody rigidbody;
+    [HideInInspector]public Rigidbody rigidbody;
     public GroundedState groundedState;
-    public bool isJumping;
+    [HideInInspector]public bool isJumping;
     public float jumpForce;
     public float deltaDistance = 1.0f;
     public float walkingRayDistance = 2.0f;
@@ -19,12 +19,12 @@ public class EnemyController : MonoBehaviour, IFreezable {
     private Ray _fallingRay, _wallRay, _walkingRay;
 
     // Use this for initialization
-    void Start () {
+    public void Start () {
         rigidbody = GetComponent<Rigidbody>();
         _fallingRay = new Ray(Vector3.zero, Vector3.down);
     }
 	
-    void Update() {
+    private void Update() {
         if (groundedState != GroundedState.GROUNDED || this.rigidbody.isKinematic) return;
         _walkingRay = new Ray(this.transform.position, -this.transform.up);
         if (Physics.Raycast(_walkingRay, out _walkingHit, walkingRayDistance)) {
@@ -67,12 +67,12 @@ public class EnemyController : MonoBehaviour, IFreezable {
         return;
     }
 
-    public void Freeze() {
+    public virtual void Freeze() {
         this.rigidbody.isKinematic = true;
         GetComponent<Renderer>().material.color = Color.cyan;
     }
 
-    public void Unfreeze() {
+    public virtual void Unfreeze() {
         this.rigidbody.isKinematic = false;
         GetComponent<Renderer>().material.color = Color.red;
     }

@@ -35,9 +35,9 @@ public class PlayerLifeController : MonoBehaviour, IDamagable {
 
     IEnumerator BecomeInvulnerable(Collider fromWho) {
         isInvulnerable = true;
-        Physics.IgnoreCollision(fromWho, PlayerManager.collider);
+        Physics.IgnoreCollision(fromWho, PlayerManager.coll);
         yield return new WaitForSeconds(invulnarabilityTime);
-        Physics.IgnoreCollision(fromWho, PlayerManager.collider, false);
+        Physics.IgnoreCollision(fromWho, PlayerManager.coll, false);
         isInvulnerable = false;
     }
 
