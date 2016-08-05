@@ -165,6 +165,30 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11421436, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 716597550}
+    - target: {fileID: 11421436, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487882, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 716597550}
+    - target: {fileID: 11487882, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496052, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 716597550}
+    - target: {fileID: 11496052, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
   m_IsPrefabParent: 0
@@ -2439,6 +2463,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14ea21d5e34dd4c4f94a87ba1ffac84f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &716597550 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11484832, guid: 14ea21d5e34dd4c4f94a87ba1ffac84f,
+    type: 2}
+  m_PrefabInternal: {fileID: 716597549}
+  m_Script: {fileID: 11500000, guid: 66cbcd4ecffb11c49b2fc35879f47a82, type: 3}
 --- !u!1 &757801912
 GameObject:
   m_ObjectHideFlags: 0
