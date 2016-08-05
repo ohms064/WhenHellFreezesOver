@@ -11,9 +11,6 @@ public class ThirdPersonCamera : MonoBehaviour {
     private Vector3 _camPosition;
     private Ray camRay;
     private float currentDistance;
-    void Start() {
-
-    }
 
 	// Update is called once per frame
 	void Update () {
@@ -32,9 +29,11 @@ public class ThirdPersonCamera : MonoBehaviour {
         this.transform.LookAt(target);
     }
 
+#if UNITY_EDITOR
     void OnDrawGizmos() {
         if (Physics.Raycast(camRay)) Gizmos.color = Color.red;
         else Gizmos.color = Color.white;
         Gizmos.DrawRay(camRay);
     }
+#endif
 }

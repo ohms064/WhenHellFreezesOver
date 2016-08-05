@@ -30,10 +30,12 @@ public class PauseManager : MonoBehaviour {
     }
 
     public void Restart() {
+        Time.timeScale = 1;
         LoadScene.ReloadScene();
     }
 
     public void Exit() {
+        Time.timeScale = 1;
         LoadScene.Load( Scenes.MAIN_MENU );
     }
 }
