@@ -11,13 +11,15 @@ public class InanimateTimeController : MonoBehaviour, IFreezable {
     private float _forceUpAngle;
     [HideInInspector] public bool isHarmful = false;
     private float damage;
+    private InanimateUIController _uiController;
 
-    private Color originalColor;
+    private Color _originalColor;
 
     // Use this for initialization
     void Start() {
-        this._rigidbody = this.GetComponent<Rigidbody>();
-        originalColor = this.GetComponent<Renderer>().material.color;
+        _rigidbody = this.GetComponent<Rigidbody>();
+        _originalColor = this.GetComponent<Renderer>().material.color;
+        _uiController = GetComponent<InanimateUIController>();
         //_phsxMat = this.GetComponent<Collider>().material;
     }
 
@@ -25,6 +27,7 @@ public class InanimateTimeController : MonoBehaviour, IFreezable {
         this.transform.localEulerAngles = new Vector3( 0.0f, 0.0f, rotation );
         Quaternion quat = Quaternion.AngleAxis( _forceUpAngle, this.transform.forward );
         _directionAtStop = quat * this.transform.up;
+        _uiController.Rotatate( _directionAtStop );
     }
 
     public void Freeze() {
@@ -36,12 +39,13 @@ public class InanimateTimeController : MonoBehaviour, IFreezable {
         _speedAtStop = _directionAtStop.magnitude;
         if (Mathf.Abs(_speedAtStop) > 0.0f) {
             _directionAtStop /= _speedAtStop;
+            _uiController.Enable( _directionAtStop );
         }
         _angularVelocityAtStop = this._rigidbody.angularVelocity;
         _forceUpAngle = Vector3.Angle(this.transform.up, _directionAtStop);
         //_phsxMat.dynamicFriction = 0.0f; //Para que el personaje no se pegue a el.
         //_phsxMat.staticFriction = 0.0f;
-        this._rigidbody.isKinematic = true;
+        _rigidbody.isKinematic = true;
         GetComponent<Renderer>().material.color = Color.cyan;
     }
 
@@ -56,8 +60,10 @@ public class InanimateTimeController : MonoBehaviour, IFreezable {
             StartCoroutine("ActiveDamage");
         }
         else {
-            GetComponent<Renderer>().material.color = originalColor;
+            GetComponent<Renderer>().material.color = _originalColor;
         }
+
+        _uiController.Disable();
         //_phsxMat.dynamicFriction = 1.0f;
         //_phsxMat.staticFriction = 1.0f;
     }
@@ -77,7 +83,7 @@ public class InanimateTimeController : MonoBehaviour, IFreezable {
             yield return new WaitForFixedUpdate();
             damage = Mathf.InverseLerp(0.0f, _speedAtStop, _rigidbody.velocity.magnitude);
         }
-        ren.material.color = originalColor;
+        ren.material.color = _originalColor;
         isHarmful = false;
 
     }
