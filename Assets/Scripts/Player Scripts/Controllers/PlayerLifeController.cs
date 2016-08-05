@@ -30,7 +30,7 @@ public class PlayerLifeController : MonoBehaviour, IDamagable {
 
     //From IDamagable
     public void Die() {
-        print("El jugador ha muerto!");
+        LoadScene.ReloadScene();
     }
 
     IEnumerator BecomeInvulnerable(Collider fromWho) {

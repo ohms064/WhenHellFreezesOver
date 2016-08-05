@@ -3580,6 +3580,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1319039912}
   m_Script: {fileID: 11500000, guid: 8e7bbc2fe440ef649a16c7c4e517ab40, type: 3}
+--- !u!223 &1319039915 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 22395784, guid: af0dccdcdfa57d44cb62e46d157ae49d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319039912}
 --- !u!1 &1434627970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3921,6 +3926,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11484832, guid: 14ea21d5e34dd4c4f94a87ba1ffac84f, type: 2}
+      propertyPath: menuPause
+      value: 
+      objectReference: {fileID: 1319039915}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14ea21d5e34dd4c4f94a87ba1ffac84f, type: 2}
   m_IsPrefabParent: 0
@@ -3932,14 +3941,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1875912797}
-  - 33: {fileID: 1875912801}
   - 65: {fileID: 1875912800}
-  - 23: {fileID: 1875912799}
   - 114: {fileID: 1875912798}
   m_Layer: 0
   m_Name: NextLevelTrigger
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3971,32 +3978,6 @@ MonoBehaviour:
   waitTime: 3
   sceneToSave: 3
   saveOnLoad: 1
---- !u!23 &1875912799
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1875912796}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1875912800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4009,10 +3990,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.67, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1875912801
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1875912796}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}

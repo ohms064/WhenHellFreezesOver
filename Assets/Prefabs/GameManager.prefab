@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11418102}
   - 82: {fileID: 8208848}
   - 114: {fileID: 11444016}
+  - 114: {fileID: 11484832}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -142,6 +143,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezePitch: 0.5
   slowTime: 0.7
+--- !u!114 &11484832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cbcd4ecffb11c49b2fc35879f47a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPause: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

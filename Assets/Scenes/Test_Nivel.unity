@@ -168,6 +168,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af0dccdcdfa57d44cb62e46d157ae49d, type: 2}
   m_IsPrefabParent: 0
+--- !u!223 &68854226 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 22395784, guid: af0dccdcdfa57d44cb62e46d157ae49d,
+    type: 2}
+  m_PrefabInternal: {fileID: 68854225}
 --- !u!1001 &97022327
 Prefab:
   m_ObjectHideFlags: 0
@@ -503,6 +508,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 11484832, guid: 14ea21d5e34dd4c4f94a87ba1ffac84f, type: 2}
+      propertyPath: menuPause
+      value: 
+      objectReference: {fileID: 68854226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14ea21d5e34dd4c4f94a87ba1ffac84f, type: 2}
   m_IsPrefabParent: 0
